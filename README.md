@@ -52,7 +52,9 @@ if (usuarioRegistrado) {
     console.log("Por favor, regístrate.");
 }
 ```
+
 ###### Estructura de Repetición for: Supongamos que quieres mostrar en tu página web una lista de los 10 primeros números.
+
 ```
 for (let i = 1; i <= 10; i++) {
     console.log(i);
@@ -102,6 +104,7 @@ Bueno las funciones son bloques de construcción fundamentales en javascript.
 <p>
 la declaración de una función o expresión de función tiene una palabra clace que es function, y de ahí se le pasan unos parámetros.
 </p>
+
 ```
 function saludar() {
     console.log("¡Hola!");
