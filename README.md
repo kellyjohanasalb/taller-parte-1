@@ -16,4 +16,5 @@ Colocar el Jamón y el Queso: Poner una rebanada de jamón y una de queso entre 
 Cerrar el Sándwich: Asegurarse de que el jamón y el queso estén completamente dentro del pan.
 Servir: Colocar el sándwich en un plato para comerlo.
 Con este ejemplo, vemos que cada paso es una instrucción clara y precisa. De la misma manera, en la lógica de programación, un algoritmo es una serie de pasos que se siguen para realizar tareas como calcular números, organizar datos, o incluso controlar el funcionamiento de un juego. Estos pasos deben ser claros y exactos para que la computadora pueda entenderlos y ejecutarlos correctamente.
+
 ¿Qué son estructuras de control en la programación?, ¿Cuáles son los tipos de estructuras de control y las estructuras más comunes de cada tipo?, Describir al menos dos tipos de estructura de control, explicar por qué son importantes y proporcionar ejemplos de cada uno de cómo se utilizan en el desarrollo web Frontend.
