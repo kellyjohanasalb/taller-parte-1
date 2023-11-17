@@ -1,4 +1,4 @@
-###MÓDULO SOBRE LÓGICA, LÓGICA DE PROGRAMACIÓN Y PROGRAMACIÓN CON JAVASCRIPT
+#MÓDULO SOBRE LÓGICA, LÓGICA DE PROGRAMACIÓN Y PROGRAMACIÓN CON JAVASCRIPT
 <p>
 Para mi la logica en programación la parte que le da dinamismo a las páginas web que vemos y con la que interactuamos (como botones, imágenes, textos), la lógica es muy importante porque ayuda a que la página funcione correctamente. Por ejemplo, si se hace clic en un botón para enviar un mensaje, hay una lógica detrás que se encarga de asegurar que tu mensaje se envíe a la persona correcta. 
 la lógica en programación es como el cerebro de las páginas web y aplicaciones, que les ayuda a saber qué hacer y cómo reaccionar a lo que hacemos cuando las usamos. Es por eso que es tan importante en el desarrollo web Frontend.
@@ -504,6 +504,556 @@ console.log("Títulos de libros:", titulos);
 console.log("Libros publicados después del año 2000:", librosRecientes);
 
 ```
+
+# MÓDULO SOBRE HTML, CSS Y RESPONSIVE DESIGN
+
+###### ¿Qué significa HTML y cuál es su función en el desarrollo web?
+
+<p>
+Bueno para mi HTML es esencial para la creación de páginas web, sirviendo como su esqueleto o estructura base, donde agregamos estilos y funcionalidades para crear sitios web completos y funcionales. y que es lenguaje  de Marcado de Hipertexto.
+</p>
+###### ¿Cuál es la estructura básica de un documento HTML? Describir las etiquetas esenciales
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+<p>
+Ya dentro del body podemos poner una etiqueta sesion, un article y también h1 que es donde encerramos todo el contenido visible de la página, como texto, imágenes, enlaces, tablas, listas y otros elementos.
+
+entonces uan sesion se usa para definir una sección dentro de un documento.
+un article : Esta etiqueta se utiliza para encerrar contenido autocontenido y distribuible.
+y un h1 sirve para el encabezado principal de una página o sección.
+</p>
+
+###### ¿Qué es CSS y cuál es su propósito en el desarrollo web?
+
+<p>
+Conocemos que Css se conoce como hojas de estilos en cascada(Cascading Style Sheets ) y su proposito en el desarrollo web es ser esa parte grafica que vemos, me refiero a la parte visual que el usuario incluyendo colores, fuentes, espaciado, alineación, tamaños de los elementos.
+</p>
+
+######  ¿Qué son selectores CSS, cuáles son los principales tipos de selectores y porqué es importante entender la especificidad en el contexto de las hojas de estilo en cascada (CSS)? Describir al menos tres tipos de selectores CSS y cómo la especificidad afecta a la aplicación de estilos en un proyecto de desarrollo web Frontend.  Proporcionar ejemplos de situaciones en las que se utiliza la especificidad de selectores  para resolver conflictos de estilos.
+
+<p>
+Los selectores CSS son esas etiquetas que  utilizados para seleccionar los elementos del DOM (Document Object Model) a los cuales se les aplicarán estilos. 
+ejemplo:
+</p>
+
+- Selector de Tipo o de Etiqueta: en estos se comprenden como la etiqueta (p).
+- Selector de Clase: estos se comprenden por el atributo de clase (.container).
+- Selector de ID: en estos comprendemos por su único atributo  ID (#encabezado-principal).
+
+###### Explicar las diferencias entre los estilos en línea (inline), estilos internos (embedded) y estilos externos (external) en CSS. Indicar cuál de los tres estilos es el recomendado usar y por qué.
+<p>
+bueno la diferencia de los diferentes estilos es que el (inline) se aplica directamente sobre la línea de código. Los estilos (embedded) son los que se aplicaria directamente en el archivo html y los estilos (external), son los que se usan en un archivo aparte se enlazan con el html. y el mas usado y se recomienda usar es el external por que nos permite tener mejor mantenimiento y consistencia, también por rendimiento y reusabilidad.
+</p>
+
+ ###### ¿Qué es flexbox y cómo se utiliza para el diseño de páginas web?
+<p>
+Bueno Flexbox, o el modelo de caja flexible, es una herramienta de diseño de páginas web que nos facilita la disposición de elementos en un contenedor de manera eficiente, incluso cuando su tamaño es desconocido o dinámico. 
+Y se utiliza como contenedor flexible (conocido como flex container) y sus hijos (flex items). Y cuando aplicamos display: flex a un elemento, y se conviertes en un contenedor flex, y sus hijos directos se convierten automáticamente en elementos flexibles.
+</p>
+###### Explicar cómo se emplean las propiedades flexbox y explicar la función de las principales propiedades en la creación de diseños flexibles.
+<p>
+Entonces podemos decir que flexbos es un modelo de diseño en css que nos proporciona una forma mas eficiente y predeccible de organizar elementos en un contenedor ya que sus tamaños son desconcidos o dinámicos
+especialmente cuando sus tamaños son desconocidos o dinámicos. 
+ejemplo:
+</p>
+
+```
+.contenedor-flex {
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme entre tarjetas */
+    align-items: center;          /* Alineación vertical al centro */
+}
+
+.tarjeta {
+    flex: 1;                      /* Cada tarjeta crece para ocupar un espacio igual */
+    margin: 10px;                 /* Margen alrededor de cada tarjeta */
+    padding: 20px;                /* Espaciado interno dentro de las tarjetas */
+    border: 1px solid #ccc;       /* Borde para las tarjetas */
+    text-align: center;           /* Texto alineado al centro */
+}
+```
+
+
+######  ¿Qué es CSS Grid Layout y en qué se diferencia de flexbox?
+<p>
+CSS Grid Layout, es un sistema de diseño bidimensional que nos permite a los desarrolladores crear complejas estructuras de diseño web con filas y columnas. 
+que a diferencia de Flexbox, que es principalmente unidimensional y aunque puede manejar dos dimensiones, su enfoque principal es ya sea filas o columnas, Grid está diseñado para trabajar con dos dimensiones simultáneamente. también Grid es más adecuado para diseños complejos y de mayor escala como el diseño general de una página, mientras que Flexbox es ideal para componentes y elementos más pequeños dentro de esos diseños (como barras de navegación, elementos de un formulario, etc.).
+</p>
+###### Proporcionar un ejemplo de cómo crear una cuadrícula sencilla con CSS Grid.
+- ejemplo:
+
+```
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto; /* Tres columnas de igual ancho */
+    grid-template-rows: auto auto;         /* Dos filas */
+    gap: 10px;                             /* Espaciado entre celdas */
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+```
+
+
+###### ¿Qué significa el diseño responsivo en el contexto del desarrollo web?
+
+<p>
+El diseño responsivo, o diseño web adaptable, es la manera en que el desarrollo web, busca asegurar que las páginas web funcionen bien en una variedad de dispositivos y tamaños de pantalla. ya que su idea central del diseño responsivo es crear sitios web que proporcionen una experiencia de usuario óptima en términos de lectura, navegación y uso interactivo, sin necesidad de redimensionar, hacer zoom o desplazarse en exceso, independientemente del dispositivo utilizado.
+</p>
+
+###### Enumerar al menos tres técnicas o estrategias utilizadas para lograr el diseño responsivo en una página web.
+
+- Media Queries en CSS: Las Media Queries son una de las herramientas más poderosas para crear diseños responsivos. 
+- Diseño Fluid Grid: En vez de utilizar medidas fijas (como píxeles o puntos), el diseño fluid grid utiliza porcentajes y unidades relativas (como EM o REM) para definir el ancho y el margen de los elementos.
+- Imágenes y Contenidos Flexibles: Para que las imágenes y otros contenidos multimedia se adapten a diferentes tamaños de pantalla, se utilizan técnicas para hacerlos flexibles.
+
+
+# MÓDULO SOBRE DOM E INTERACCIÓN CON EL DOM
+###### ¿Qué es el DOM (Modelo de Objeto de Documento) en el contexto de la programación web?
+<p>
+El DOM es un puente entre el contenido web (HTML y XML) y los lenguajes de programación, lo que permite la creación de experiencias web ricas y dinámicas.
+</p>
+
+###### ¿Cuál es la diferencia entre el DOM y el HTML en una página web?
+<p>
+la direfencia entre el DOM y HTML: es que el DOM es una representación en tiempo de ejecución del HTML, pero en forma de un árbol de objetos que el navegador puede entender y manipular. Y el HTML es un lenguaje de marcado utilizado para crear y estructurar el contenido en la web.
+</p>
+
+###### ¿Porqué es importante entender y manipular el DOM en el desarrollo web Frontend?
+<p>
+Porque nos permite interactividad  y experiencia de usuario dandole dinamismo  y mejoramos la UX como dando click  y desplazamiento.También nos permite actualizaciones del contenido dinamico; bueno también en la se puede modificar los estilos eso si no me sabia jajajajja.
+</p>
+
+###### ¿Qué son los eventos del DOM y cuál es su función en una página web?
+<p>
+los eventos del DOM son notificaciones que se envian para señalar que algo a ocurrido en la pág web y estos eventos puede ser iniciados por el usuario con un click, desplazamientos, etc.
+</p>
+**Su Función es:**
+- interactividad
+- manipulacion de contenido.
+- validacion de formularios.
+- animaciones y efectos visauales
+- comunicacion entre componentes.
+- mejora la accesibilidad.
+
+###### Proporcionar ejemplos de eventos prácticos y comunes, como “click”, “submit” y “load o DOMContentLoad”.
+- ejemplo 1-click:
+```
+document.getElementById('miBoton').addEventListener('click', function() {
+    alert('¡Botón clickeado!');
+});
+```
+- ejemplo 2-submit:
+
+```
+<form id="miFormulario">
+    <input type="text" required>
+    <input type="submit" value="Enviar">
+</form>
+
+
+```
+- ejemplo 3-load:
+
+```
+document.addEventListener('DOMContentLoaded', function() {
+    alert('¡El DOM está completamente cargado y analizado!');
+});
+```
+
+
+###### ¿Por qué es importante manejar eventos en la interacción usuario-web y cómo se añaden controladores de eventos a los elementos del DOM?
+<p>
+Es importante las interaciones del Dom porque nos permiten la interacion usuario-web, haciendo que las interfaces sean interactivas y dinámicas. 
+</p>
+- ejemplo de controlador de eventos en el html: 
+
+```
+<button onclick="miFuncion()">Haz Click Aquí</button>
+```
+- ejemplo de controlador de eventos en el dom: 
+```
+document.getElementById('miBoton').onclick = miFuncion;
+```
+###### Describir al menos tres métodos para seleccionar elementos del DOM en JavaScript.
+- getElementById: Este método los usamos para seleccionar un elemento por su atributo id. Es uno de los métodos más comun para acceder a un elemento específico.
+- getElementsByClassName: Este nos selecciona una lista de elementos que comparten una misma clase CSS. Retorna un HTMLCollection de todos los elementos que tienen la clase especificada.
+- querySelector y querySelectorAll: Este nos  Retorna el primer elemento que coincide con un selector CSS específico.
+
+###### ¿Cómo se crea un nuevo elemento HTML y se agrega al DOM utilizando JavaScript?
+- ejemplo de como se crea y se agrega
+- creando elemento
+
+```
+const nuevoElemento = document.createElement('div');
+```
+- Añadiendo Contenido al Elemento.
+
+```
+nuevoElemento.textContent = '¡Hola, Mundo!';
+// O
+nuevoElemento.innerHTML = '<strong>¡Hola, Mundo!</strong>';
+
+```
+- Agregar el Nuevo Elemento al DOM
+
+```
+contenedor.appendChild(nuevoElemento);
+```
+- Y si quieres  insertarlo antes de otro elemento específico dentro del contenedor, utilizas insertBefore.
+
+```
+const elementoReferencia = document.getElementById('elementoReferencia');
+contenedor.insertBefore(nuevoElemento, elementoReferencia);
+
+```
+
+###### ¿Cuál es la importancia de la manipulación del DOM en la creación de aplicaciones web dinámicas e interactivas?
+<p>
+Que nos permite respuestas de acciones del ususario y tambien nos dan por decirlo asi un feedback inmediato de esas acciones del usuario. Manejo de actualizacion de contenido en tiempo real por la carga de contenido dinamico. tambien nos permite la integracion de tecnologia web y APIS
+</p>
+
+###### Explicar brevemente los conceptos “event bubbling” y “event delegation” en el contexto de eventos del DOM.
+- EVENT BUBBLING
+<p>
+ Event bubbling (propagación de eventos) es un mecanismo por el cual un evento activado en un elemento específico se propaga hacia arriba a través del árbol del DOM, pasando por cada uno de los ancestros del elemento. Por ejemplo, si haces clic en un botón que está dentro de un div, que a su vez está dentro de otro div, un evento de clic iniciado en el botón se propagará primero al div padre inmediato y luego al siguiente, y así sucesivamente hasta llegar al objeto document.
+</p>
+- EVENT DELEGATION
+<p>
+ Event delegation es una técnica que aprovecha el bubbling de eventos para manejar eventos en un nivel superior en el DOM en lugar de en el propio elemento donde ocurre el evento.
+ En lugar de asignar un manejador de eventos a cada elemento individual, asignas un único manejador a un elemento ancestro. Este manejador luego puede decidir qué acción tomar basándose en el origen del evento, generalmente inspeccionando el objeto de evento para determinar cuál fue el elemento específico que disparó el evento.
+</p>
+
+###### ¿Por qué son relevantes los conceptos “event bubbling” y “event delegation” en la gestión de eventos en páginas web con múltiples elementos interactivos?
+<p>
+estos dos conceptos son relevantes en la gestión de eventos en páginas web con múltiples elementos interactivos ya nos permiten eficiencia, rendimiento, mantenimiento y escalabilidad
+</p>
+
+# MÓDULO SOBRE COMUNICACIÓN CON EL SERVIDOR (STORAGE, PROMESAS, ASINCRONÍAS Y PETICIONES HTTPS)
+
+######  Definir brevemente el concepto de localStorage y sessionStorage. 
+- localStorage: proporciona una forma de almacenar datos de manera persistente en el navegador del usuario. Los datos almacenados en localStorage permanecen disponibles incluso después de cerrar y reabrir el navegador.
+- sessionStorage: almacena datos solo durante la duración de la página o sesión actual. Los datos almacenados en sessionStorage se borran automáticamente cuando se cierra la pestaña o la ventana del navegador.
+
+entonces podemos decir que localstorage guarda info que se ve incluso del lado del usuario o cliente, mientras que sessionstorage guarda los datos mientras estes en la pag ya que se borran apenas se cierre la pag.
+
+###### Describir las diferencias claves entre localStorage y sessionStorage.
+<p>
+buena en la pregunta anterios respondi como su diferencia mas notoria, pero tambien se puede decir que en localstorage guarda datos en memoria y persisten en el mismo origen ya sea host y puerto. y sessionstorage su almacenamiento es limitado solo en la pestaña donde esta ubicado y no persiste en el origen.
+</p>
+
+###### ¿Por qué son útiles para almacenar datos en el navegador y cuál es su límite de capacidad?
+
+<p>
+El almacenamiento de datos en el navegador es una herramienta muy buena para mejorar la experiencia de usuario, la eficiencia y el rendimiento de las aplicaciones web. Sin embargo, es importante tener en cuenta las limitaciones de capacidad y seguridad al utilizar estos mecanismos como que su capapcidad limite de ambos suele ser de alrededor de 5 MB por dominio, aunque esto puede variar ligeramente entre diferentes navegadores. Encuanto a limites de seguridad  debido a que el almacenamiento web es accesible a través de JavaScript, es importante no almacenar datos sensibles o personales que podrían ser expuestos a ataques de scripts cruzados.
+</p>
+
+###### . ¿Qué son las promesas en JavaScript y para qué se utilizan en el desarrollo web?
+
+<p>
+Las promesas en JavaScript son un mecanismo para manejar operaciones asincrónicas, proporcionando una manera más limpia y eficiente de trabajar con acciones que tomarán tiempo en completarse, como la recuperación de datos de una API,  o cualquier otra tarea que dependa de la espera de un resultado.
+Son particularmente útiles para solicitudes de red, como trabajar con APIs o cargar recursos externos. Por ejemplo, con la API fetch para realizar solicitudes HTTP.
+</p>
+
+###### Explica el concepto de asincronía en programación y cómo las promesas ayudan a manejar operaciones asincrónicas.
+
+<p>
+las Promesas asincronicas son esas peticiones que se le hacen y que no se sabe cuando van a retornar una respuesta  indeterminada para completarse, como solicitudes de red. Estas nos ayudan a manejar esa peticiones a APIs como el get, post, delete.
+</p>
+###### Proporciona un ejemplo de cómo se utiliza una promesa para realizar una operación asincrónica, como una solicitud de red.
+- ejemplo:
+
+```
+document.getElementById('cargarDatos').addEventListener('click', function() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error en la solicitud: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            mostrarDatos(data);
+        })
+        .catch(error => {
+            console.error('Error en la operación:', error);
+        });
+});
+
+function mostrarDatos(data) {
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = '<ul>' + data.map(post => `<li>${post.title}</li>`).join('') + '</ul>';
+}
+```
+
+###### ¿Qué es JSON Server y cómo se utiliza en el desarrollo web?
+
+<p>
+Bueno para mi el JSON server es una herramienta ideal para simular una base datos como tipo back-end simple y rápido para pruebas o desarrollo de aplicaciones front-end. Y su uso y configuración lo convierte en una elección popular para simular APIs y trabajar con datos en un entorno de desarrollo local.
+se utuliza haciendole creando un archivo y se le puede realizar solicitudes HTTP (GET, POST, PUT, DELETE, etc.
+</p>
+- ejemplo:
+
+```
+{
+    "posts": [
+        { "id": 1, "title": "json-server", "author": "typicode" }
+    ],
+    "comments": [
+        { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+}
+```
+###### ¿Por qué es útil simular una API REST falsa con JSON Server en el desarrollo frontend?
+
+<p>
+Es util porque simulamos una base de datos en un desarrollo local, se pueden hacer pruebas controladas permitiendonos una implementacion del backend sin tener uno finalizado.
+</p>
+
+
+###### ¿Cuáles son las diferencias claves entre los métodos del objeto promesa .then().catch() y las palabras claves async/await?
+<p>
+bueno las diferecias que hay entre async/await estamos haciendo peticiones a una APIs ya sea de get, post, delete, etc.
+y el manejo de  .then().catch() es un metodo de manejador de promesas pero de promesas exitosas y errores, pero se maneja fuera de async/await.
+pero se maneja como el programdor considere mejor.
+</p>
+###### Proporciona un ejemplo de cómo configurar una API falsa con JSON Server y realizar solicitudes (GET, POST, PUT, PATCH y DELETE) a través de ella.
+- ejemplos: 
+
+```
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "text": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
+```
+GET
+
+```
+fetch('http://localhost:3000/posts')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
+POST
+
+```
+fetch('http://localhost:3000/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ title: 'Nuevo Post', author: 'Autor' }),
+})
+.then(response => response.json())
+.then(data => console.log(data));
+```
+PUT
+
+```
+fetch('http://localhost:3000/posts/1', {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ title: 'Post Actualizado', author: 'Otro Autor' }),
+})
+.then(response => response.json())
+.then(data => console.log(data));
+```
+PATCH
+
+```
+fetch('http://localhost:3000/posts/1', {
+  method: 'PATCH',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ author: 'Nuevo Autor' }),
+})
+.then(response => response.json())
+.then(data => console.log(data));
+```
+DELETE
+
+```
+fetch('http://localhost:3000/posts/1', {
+  method: 'DELETE',
+})
+.then(response => response.json())
+.then(() => console.log('Post eliminado'));
+```
+###### Describe las diferencias entre Fetch y Axios como métodos para realizar solicitudes HTTP en JavaScript.
+** Fetch:**
+-  Es Nativo y Sin Dependencias.
+- Manejo Manual de Errores,
+- Sin Soporte para Tiempos de Espera (Timeouts).
+
+**Axios**
+- Soporte para Navegadores Antiguos.
+- Interceptores de Solicitudes y Respuestas.
+- Manejo Automático de Errores HTTP.
+- Soporte para Tiempos de Espera (Timeouts).
+
+###### ¿Por qué es importante considerar las peticiones HTTP en aplicaciones web modernas?
+- porque nos permite comunicr con un servidor.
+- arquitecturas basada en APIs.
+- aplicaciones de página unica.
+- rendimiento y optimizacion.
+- seguridad.
+- desarrollo y mantenimiento.
+
+###### Proporciona ejemplos de cómo se utilizan Fetch y Axios para realizar solicitudes GET y POST.
+- ejemplos: 
+get
+
+```
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Fetch error:', error));
+```
+post
+
+```
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+})
+.then(data => console.log(data))
+.catch(error => console.error('Fetch error:', error));
+```
+get axios
+```
+axios.get('https://jsonplaceholder.typicode.com/posts')
+  .then(response => console.log(response.data))
+  .catch(error => console.error('Axios error:', error));
+```
+post
+
+```
+axios.post('https://jsonplaceholder.typicode.com/posts', {
+  title: 'foo',
+  body: 'bar',
+  userId: 1
+})
+.then(response => console.log(response.data))
+.catch(error => console.error('Axios error:', error));
+```
+
+###### Explica la importancia del manejo de errores al trabajar con promesas en el desarrollo web.
+<p>
+Es im portante el manejo de errores efectivo y bien pensado para crear aplicaciones web fiables y de alta calidad. Asegura que la aplicación pueda manejar y recuperarse de errores de manera armonica, proporcionando una experiencia de usuario fluida y segura, y facilitando el desarrollo y mantenimiento del código.
+</p>
+###### Describe cómo se manejan los errores en las promesas, incluyendo el uso de catch.
+
+Bueno una promesa en JavaScript es un objeto que representa la eventual finalización o fracaso de una operación asincrónica. Cada promesa pasa por varios estados:
+
+- Pendiente (Pending): Estado inicial, no cumplida ni rechazada.
+- Cumplida (Fulfilled): La operación se completó exitosamente.
+- Rechazada (Rejected): La operación falló.
+
+- ejemplo:
+
+```
+async function miFuncionAsincrona() {
+  try {
+    let resultado = await miPromesa();
+    // Manejar resultado exitoso
+  } catch (error) {
+    // Manejar el error
+    console.error('Error en la promesa:', error);
+  }
+}
+```
+###### ¿Cuáles son las diferencias claves entre los métodos del objeto promesa .then().catch() y la estructura try/catch?
+** .then().catch()**
+se utiliza específicamente con promesas. Es la forma estándar de manejar el flujo asincrónico y los errores en operaciones basadas en promesas. Y nos permite encadenar múltiples operaciones asincrónicas. Un .then() puede ser seguido por otro .then(), y finalmente por un .catch() que manejará cualquier error ocurrido en la cadena.
+
+**try/catch**
+se utiliza en bloques de código sincrónicos y se ha extendido al manejo de promesas con la introducción de async/await. Y dentro de una función async, puedes usar try/catch para capturar errores tanto de operaciones sincrónicas como asincrónicas.
+
+###### Proporciona un ejemplo de cómo se puede manejar un error en una promesa al realizar una solicitud de red.
+- ejemplo:
+
+```
+const axios = require('axios'); // Importar Axios (asegúrate de tenerlo instalado)
+
+async function realizarSolicitud() {
+  try {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/nonexistent');
+    
+    // Verificar si la respuesta es exitosa
+    if (response.status !== 200) {
+      throw new Error('La solicitud no fue exitosa: ' + response.statusText);
+    }
+    
+    const data = response.data;
+    
+    // Lógica para procesar los datos exitosamente
+    console.log('Datos obtenidos:', data);
+  } catch (error) {
+    // Manejo de errores
+    console.error('Error en la solicitud:', error.message);
+  }
+}
+
+// Llamar a la función para realizar la solicitud
+realizarSolicitud();
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
